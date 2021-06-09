@@ -11,5 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let baseURL: String = Bundle.main.infoDictionary?["BASE_URL"] as? String else { return }
+        
+        debugPrint(baseURL)
     }
 }
